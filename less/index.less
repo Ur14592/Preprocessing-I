@@ -4,6 +4,16 @@
    License: none (public domain)
 */
 
+.bgcolor{
+	background-color: #568fa0;
+}
+
+.bgcolor1{
+	background-color: #0f4658;
+}
+
+@width: 100%;
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -50,10 +60,175 @@ table {
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
+	padding:0;
+	margin:0;
+	max-width: 100%;
 }
 
 html, body {
     height: 100%;
 }
 
+
+body{
+	font-family: 'Source Serif Pro', serif;
+	line-height: 2;
+}
+
+h1, h2, h3, h4{
+	font-family: 'Fjalla One', sans-serif;
+	text-align: center;
+	padding: 2% 0;
+
+}
+section{
+	padding : 4% 0%;
+}
+
+/*****Header Style here*****/
+header{ 
+	height:70vh;
+	background-image: url('../images/header.jpg');
+	background-repeat: no-repeat;
+	background-size:cover;
+	background-attachment: fixed; 
+	width:@width;
+	height: 80%;
+	color:black;
+}
+
+nav{
+	display:flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	height: 5%;
+	text-shadow: 3px 2px black;
+	a{
+		color:#022f40;
+	}
+
+
+}
+
+.bgContainer{
+	width:50%;
+}
+.links{
+	width:@width;
+	display: flex;
+	justify-content: space-evenly;
+}
+.titles{
+	display: flex;
+	justify-content: center;
+	div{
+		width: 90%;
+		height: 100%;
+		margin: -70px;
+	}
+}
+/********	about section styles******/
+
+
+
+
+#about{
+	.bgcolor();
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color:#0f4658;
+
+	div{
+		.bgcolor();
+		width:60%;
+	}
+	
+}
+#skills {
+	text-align: center;
+	.bgcolor1();
+	color:#568fa0;
+	h2{
+	display: flex;
+	justify-content: center;
+}
+
+	p{
+	text-align: justify;
+}
+}
+
+.skillsContainer{
+	display: flex;
+	justify-content: space-between;
+	div{
+		width: 20%;
+	}
+
+}
+
+
+
+#wex{
+	border: 1px solid black;
+	.bgcolor();
+}
+
+#cont{
+	.bgcolor();
+
+}
+
+@media only screen and (max-width: 500px) {
+	header{ 
+		height:70vh;
+		background-image: url('../images/header.jpg');
+		background-repeat: no-repeat;
+		background-size:cover;
+		background-attachment: fixed; 
+		width:@width;
+		height: 40%;
+		color:white;
+		img{
+			display: none;
+		}
+		.titles{
+			padding-top: 10%;
+			display: flex;
+			align-content: space-between;
+		}
+	}
+	nav{
+		display:flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		height: 5%;
+		text-shadow: 3px 2px black;
+		a{
+			color:white;
+		}
+	
+	
+	}
+
+
+	#skills{
+		.skillsContainer{
+		display: flex;
+		flex-direction: column;
+		
+			div{
+				border: 3px solid black;
+				width: 150%;
+				p{
+			width:100%;
+				}
+			}
+		}
+		
+	}
+  }
